@@ -4,4 +4,4 @@ Coding Dojo du 23 juillet 2013
 Legacy Code Retreat : Trivia Kata en Python
 -------------------------------------------
 
-Le but de ce kata etait de prendre du code existant et moche et de le refactoriser en ecrivant des tests exploratoires, de facon trouver le fonctionement de cette boite noir avant de commencer de le refactoriser. 
+Le but de ce kata était de prendre du code existant et moche et de le refactoriser en ecrivant des tests exploratoires, trouver le fonctionement en mode boite noir avant de commencer de le refactoriser. 

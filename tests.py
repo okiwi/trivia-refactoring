@@ -28,12 +28,6 @@ class TestTrivia(unittest.TestCase):
         with self.assertRaises(IndexError) as c:
             self.game.roll(randrange(-10, 10))
 
-    def test_roll_1_raise_exception(self):
-        self.game.add("Bob")
-
-        self.game.add("Ana")
-        self.game.roll(2)
-
     def test_random_test(self):
         for i in range(randrange(4) + 1):
             player_name = 'player' + str(i)
@@ -47,8 +41,8 @@ class TestTrivia(unittest.TestCase):
 
     def test_is_playable(self):
         self.assertFalse(self.game.is_playable())
-        self.game.add("1")
-        self.game.add("2")
+        self.game.add("Bob")
+        self.game.add("Ana")
         self.assertTrue(self.game.is_playable())
 
     def test_wrong_answer(self):
@@ -94,7 +88,7 @@ class TestTrivia(unittest.TestCase):
             self.game.was_correctly_answered()
         self.assertFalse(self.game._did_player_win())
 
-    def test_correct_answer_earn_1_coin(self):
+    def test_was_correctly_answered_with_penalty_box(self):
         self.game.add("Bob")
         self.game.wrong_answer()
         self.game.roll(2)
